@@ -6,10 +6,10 @@ Note: Change ip address and port number of socket comminucation used in new_serv
 
 $ make
 
-shell 1
+server
 $ ./server
 
-shell 2
+client
 $ ./client
 
 Check pdf file for a brief demo.
