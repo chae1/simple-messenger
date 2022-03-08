@@ -1,14 +1,5 @@
-
-
-/* This server is based on threads. When a client connect to the server, server creates a thread, then this thread
-   starts to communicate with the client. So, each thread works concurrently communicating with each client. */
-
+/* Server provides a messenger service to a client via socket communication. Thread is used for a concurrent service which will read or modify the global variables depending on client requests. Semaphore is used to prevent duplicate accesses to global variables at a time by different threads. */
 /* The server expects to read commands from clients. A command is a string line composed of several words */
-
-/* When the server reads some commands and modify the global variables, there's a chance that several threads 
-   try to change the same variable at the same time. To prevent this, semaphore is used to guarantee that 
-   variables can be modified by only one thread at a time. */
-
 
 #include <sys/socket.h>
 #include <sys/types.h>
