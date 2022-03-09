@@ -1,11 +1,13 @@
 ## simple-messenger
-A messenger program running on linux shell. 
+A messenger server and client program which can be executed from linux shell. 
 
 ### Usage
-Note: Change ip address and port number of socket comminucation used in new_server.c and new_client.c  (by default, "147.46.241.102" and 20741).
 
 $ make
-server$ ./server
-client$ ./client
+server$ ./server ip_address:port_num
+client$ ./client ip_address:port_num
 
-Check pdf file for a brief demo.
+ex) ./server xxx.xxx.xxx.xxx:20741
+
+
+Check pdf file for brief explanation.
