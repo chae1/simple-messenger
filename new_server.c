@@ -1,10 +1,7 @@
 
-
-
 /* Main code of a messenger server designed to run on a linux machine. Thread is used to handle multiple client requests concurrently, which will read or modify the global variables. Semaphore is used to allow one thread to accesse the global variables at a time. */
 
 /* The server expects to read commands from clients. A command is a string line composed of several words */
-
 
 
 #include <sys/socket.h>
