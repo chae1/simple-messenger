@@ -1,13 +1,8 @@
 
 
-/* This server is based on threads. When a client connect to the server, server creates a thread, then this thread
-   starts to communicate with the client. So, each thread works concurrently communicating with each client. */
+/* Main code of a messenger server designed to run on a linux machine. Thread is used to handle multiple client requests concurrently, which will read or modify the global variables. Semaphore is used to allow one thread to accesse the global variables at a time. */
 
 /* The server expects to read commands from clients. A command is a string line composed of several words */
-
-/* When the server reads some commands and modify the global variables, there's a chance that several threads 
-   try to change the same variable at the same time. To prevent this, semaphore is used to guarantee that 
-   variables can be modified by only one thread at a time. */
 
 
 #include <sys/socket.h>
@@ -47,17 +42,38 @@ sem_t request_mutex;
 
 int main(int argc, char **argv)
 {
-    int listenfd, optval = 1;
+	char buf[30];
+	
+	if (argc == 1) {
+		printf("Insert ip_address:port as an argument\n");
+		return 0;
+	}
+	else {
+		strcpy(buf, argv[1]);
+	}
+	char ip_str[30];
+	char port_str[30];
+	char *token;
+	char *nextptr;
+
+	token = strtok_r(buf, ":", &nextptr);
+	strcpy(ip_str, token);
+		
+	token = strtok_r(NULL, ":", &nextptr);
+	strcpy(port_str, token);
+
+	
+	int listenfd, optval = 1;
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&optval, sizeof(int));
 
     uint32_t network_addr;
-    inet_pton(AF_INET, "147.46.241.102", &network_addr); /* server ip is 147.46.241.102 */
+    inet_pton(AF_INET, ip_str, &network_addr);
 
     struct sockaddr_in server_addr;
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = network_addr;
-    server_addr.sin_port = htons(20741); 
+    server_addr.sin_port = htons(atoi(port_str)); 
 
     if (bind(listenfd, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
 		printf("bind failed\n");
