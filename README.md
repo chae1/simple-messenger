@@ -1,5 +1,5 @@
 ## simple-messenger
-A messenger server and client program which can be executed from linux shell. 
+Simple messenger server and client program that can be executed from linux shell. 
 
 ### Usage
 
