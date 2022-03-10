@@ -11,4 +11,4 @@ $ ./client ip_address:port_num<br/>
 ex) $ ./server xxx.xxx.xxx.xxx:20741
 
 
-Check pdf file for a brief explanation.
+There's a pdf file for brief explanation. 
