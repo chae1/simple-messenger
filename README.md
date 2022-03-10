@@ -2,6 +2,7 @@
 Simple messenger server and client that can be executed on linux shell. 
 
 ### Usage
+Run a server first, then run clients.
 
 $ make<br/>
 $ ./server ip_address:port_num<br/>
