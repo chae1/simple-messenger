@@ -21,7 +21,7 @@ I have a trouble running a client to connect to the server in the following sett
 
 Series of action I did in the server machine:
 * Find local_ip_address_in_WSL by running ifconfig on WSL.<br/>
-* Run a PowerShell script for port forwarding from Windows to WSL (following https://sungyong.medium.com/wsl2-port-forwarding-2f984a26c1fd)<br/>
+* Run a PowerShell script to forward port_num from Windows to WSL (following https://sungyong.medium.com/wsl2-port-forwarding-2f984a26c1fd)<br/>
 * Make an inbound rule for port_num in Windows Defender Firewall with Advanced Security (following step 4 in https://www.williamjbowman.com/blog/2020/04/25/running-a-public-server-from-wsl-2/)<br/>
 * $ ./server local_ip_address_in_WSL:port_num<br/>
 <br/>
