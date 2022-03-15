@@ -16,7 +16,7 @@ Check pdf file for a brief description of commands.
 ### Issue
 I have a trouble running a client to connect to the server in the following settings:
 * Server runs on WSL (Windows Subsystems for Linux) on a machine in a home network.<br/>
-* Client runs on WSL on a machine in a remote network in school.<br/>
+* Client runs on WSL on a machine in a remote school network.<br/>
 <br/>
 
 Series of action I did in the server machine:
