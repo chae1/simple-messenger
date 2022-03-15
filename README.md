@@ -11,7 +11,7 @@ $ ./client ip_address:port_num<br/>
 ex) $ ./server xxx.xxx.xxx.xxx:20741
 
 
-Check pdf file for a brief explanation about commands. 
+Check pdf file for a brief description of commands. 
 
 ### Issue
 I have a trouble running a client to connect to the server in the following settings:
