@@ -14,7 +14,7 @@ ex) $ ./server xxx.xxx.xxx.xxx:20741
 Check pdf file for a brief explanation on commands. 
 
 ### Issue
-I have a trouble connecting client to the server in the following environment:
+I have a trouble running a client to connect to the server in the following settings:
 * Server runs on WSL (Windows Subsystems for Linux) on a machine in a home network.<br/>
 * Client runs on WSL on a machine in a remote network in school.<br/>
 <br/>
