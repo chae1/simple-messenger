@@ -14,7 +14,7 @@ ex) $ ./server xxx.xxx.xxx.xxx:20741
 Check pdf file for a brief description of commands. 
 
 ### How to run a server on WSL
-You may want to run a server on WSL (Windows Subsystems for Linux) in your home network.<br/>
+You may want to run a server on WSL (Windows Subsystems for Linux) on a machine in your home network and run a client on a machine in a remote network.<br/>
 
 It worked fine for me after doing a series of action found on the internet
 * Find local_ip_address_in_WSL by running ifconfig on WSL.<br/>
