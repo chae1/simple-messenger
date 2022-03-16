@@ -11,7 +11,7 @@ $ ./client ip_address:port<br/>
 ex) $ ./server xxx.xxx.xxx.xxx:20741
 
 
-Check pdf file for a brief description o commands. 
+Check pdf file for a brief description on commands. 
 
 ### How to run a server on WSL
 You may want to run a server on WSL (Windows Subsystems for Linux) on a machine in your home network and run a client on a machine in a remote network.<br/>
