@@ -24,4 +24,4 @@ After some search, I did followings to configure the machine to run the server w
 * Check whether there's a firewall program running on the machine and open the port in that program.
 * Then, run the server by $ ./server local_ip_address_in_WSL:port<br/>
 
-Run the client to connect to the server by $ ./client global_ip_address_of_the_server:port
+Run a client to connect to the server by $ ./client global_ip_address_of_the_server:port
