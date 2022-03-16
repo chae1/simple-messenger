@@ -18,7 +18,7 @@ You may want to run a server on WSL (Windows Subsystems for Linux) on a machine 
 
 After some search, I did followings to configure the machine to run the server well on WSL. 
 * Find local_ip_address_in_WSL by running ifconfig on WSL.<br/>
-* Run a PowerShell script to forward the port from Windows' local ip address to WSL's local ip address (following https://sungyong.medium.com/wsl2-port-forwarding-2f984a26c1fd).<br/>
+* Run a PowerShell script to forward the port (I used 20741 as a port number) from Windows' local ip address to WSL's local ip address (following https://sungyong.medium.com/wsl2-port-forwarding-2f984a26c1fd).<br/>
 * Set up router settings to forward the port from router's global ip address to Windows' local ip address (following https://luckygg.tistory.com/270)
 * Make an inbound rule for the port in Windows Defender Firewall with Advanced Security (following step 4 in https://www.williamjbowman.com/blog/2020/04/25/running-a-public-server-from-wsl-2/).<br/>
 * Check whether there's a firewall program running on the machine and open the port in that program.
